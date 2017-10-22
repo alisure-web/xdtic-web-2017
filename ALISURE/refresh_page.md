@@ -10,6 +10,8 @@
 ### 3.设置Webstrom/IDEA 
    ![设置Webstrom/IDEA](./img/setting_IDE_1.png) 
    ![设置Webstrom/IDEA](./img/setting_IDE_2.png) 
+   
+   >如果找不到LiveEdit,到Plugins中下载: 
    ![设置Webstrom/IDEA](./img/setting_IDE_3.png) 
 
 ### 4.使用 
