@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ALISURE">
+    <title>菜单</title>
+
+    <style>
+        body, ul{
+            margin: 0;
+            padding: 0;
+        }
+        nav ul{
+            list-style: none;
+
+            display: flex;
+            justify-content: center;
+
+            height: 100vh;
+            align-items: center;
+
+            color: #444444;
+        }
+        nav ul li{
+            display: inline-block;
+
+            width: 100px;
+            padding: 20px 30px;
+
+            text-align: center;
+            font-size: 1.2em;
+
+            background-color: #66b9e2;
+        }
+        nav ul li:hover{
+            cursor: pointer;
+            color: #ffffff;
+            background-color: #2692e2;
+
+            animation: change_color 1s infinite;
+        }
+        nav ul li+li{
+            border-left: 1px solid #2692e2;
+        }
+
+        @keyframes change_color {
+            from {background-color: #66b9e2;color: #444444;}
+            40% {background-color: #0d7fe2}
+            50% {background-color: #2692e2;color: #ffffff;}
+            to {background-color: #66b9e2;color: #444444;}
+        }
+    </style>
+
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li>one</li><li>2</li><li>three</li><li>4</li><li>this is five</li>
+    </ul>
+</nav>
+
+</body>
+</html>

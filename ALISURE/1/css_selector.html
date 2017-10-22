@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ALISURE">
+    <title>css selector</title>
+</head>
+<style>
+    main{
+        font-size: 30px;
+    }
+    span{
+        display: block;
+    }
+
+    /*0.通配选择器*/
+    *{
+        color: red;
+    }
+    /*1.元素选择器*/
+    /*p{
+        color: red;
+    }*/
+    /*2.class选择器*/
+    /*.classname{
+        color: red;
+    }*/
+    /*3.id选择器*/
+    /*#id_name{
+        color: red;
+    }*/
+    /*4.属性选择器*/
+    /*[name]{
+        color: red;
+    }*/
+    /*[name="alisure"]{
+        color: red;
+    }*/
+    /*[name*="alisure"]{
+        color: red;
+    }*/
+    /*[name^="alisure"]{
+        color: red;
+    }*/
+    /*[name$="alisure."]{
+        color: red;
+    }*/
+
+    /*5.派生选择器*/
+    /*后代选择器*/
+    /*div p{
+        color: red;
+    }*/
+    /*子元素选择器*/
+    /*div>span{
+        color: red;
+    }*/
+    /*相邻兄弟选择器*/
+    /*p+span{
+        color: red;
+    }*/
+
+    /*可以随意组合*/
+    /*div p+span{
+        color: red;
+    }*/
+    /*#id_name p>span{
+        color: red;
+    }*/
+    /*div>p .classname{
+        color: red;
+    }*/
+    /*div>p.classname{
+        color: red;
+    }*/
+
+</style>
+<body>
+    <main>
+        <p>1.main->p</p>
+        <span>2.main->span</span>
+        <div>
+            <span>3.main->div->span</span>
+            <p>4.main->div->p</p>
+            <span>5.main->div->span</span>
+            <span>6.main->div->span</span>
+            <div id="id_name">
+                <p class="classname">
+                    7.main->div->div#id_name->p.classname
+                    <span class="classname">8.main->div->div#id_name->p.classname>span.classname</span>
+                </p>
+                <p class="classname">
+                    9.main->div->div#id_name->p.classname
+                    <span>10.main->div->div#id_name->p.classname>span</span>
+                </p>
+            </div>
+        </div>
+        <div>
+            <span name>11.main->div->span[name]</span>
+            <span name="alisure">12.main->div->span[name="alisure"]</span>
+            <span name="my name is alisure.">13.main->div->span[name*="my name is alisure."]</span>
+        </div>
+    </main>
+</body>
+</html>
