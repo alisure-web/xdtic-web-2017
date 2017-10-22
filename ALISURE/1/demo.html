@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,ul{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        ul li{
+            display: inline-block;
+            background-color: #2567bc;
+            padding: 10px 30px;
+        }
+        ul li+li{
+            border-left: 1px solid #000;
+        }
+        ul li:hover{
+            cursor: pointer;
+            color: #ffffff;
+            background-color: #224c94;
+            animation: first 1s infinite;
+        }
+        @keyframes first {
+            from {
+                background-color: #2567bc;
+                color: #000000;
+            }
+            50% {
+                background-color: red;
+                color: #00ff00;
+            }
+            100%{
+                background-color: #224c94;
+                color: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li>1</li><li>2</li><li>3</li>
+    </ul>
+</nav>
+</body>
+</html>
