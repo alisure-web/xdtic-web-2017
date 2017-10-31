@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ALISURE">
+    <title>Position</title>
+
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 3em;
+            color: white;
+            background-color: black;
+        }
+        .red{
+            background-color: red;
+        }
+        /*一*/
+        /*绝对定位: 指定position为absolute的元素，脱离了文档流。*/
+        /*未指定left/top/right/bottom时，
+            absolute元素的位置为正常文档流中的位置，但是不属于文档流。*/
+        .position_absolute_1{
+            position: absolute;
+        }
+        /*指定left/right.top/bottom时，
+            absolute元素相对于其最近的一个具有定位属性的父包含块进行定位。
+            如果不存在这样的包含块，则相对于body元素进行定位。
+            如果只改变left,top还是为正常文档流中的位置。改变top同理。*/
+        .position_absolute_2{
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+
+        /*二*/
+        /*相对定位:相对于元素在正常文档流中的位置*/
+        /*实际上该元素依然占据文档中原有的位置，只是视觉上相对原来的位置有移动。*/
+        .position_relative_1{
+            position: relative;
+        }
+        .position_relative_2{
+            position: relative;
+            top: -50px;
+            left: 50px;
+        }
+
+        /*三*/
+        /*没有定位：static，元素出现在正常的文档流中（忽略top、bottom、left、right、z-index声明）*/
+        .position_static_1{
+            position: static;
+        }
+
+        /*四*/
+        /*固定定位：fixed，相对于浏览器窗口进行定位,脱离了文档流。*/
+        .position_fixed_1{
+            position: fixed;
+        }
+        .position_fixed_2{
+            position: fixed;
+            left: 250px;
+            top: 50px;
+        }
+
+        /*五*/
+        /*组合relative和absolute*/
+        /*absolute元素相对于其最近的一个具有定位属性的父包含块进行定位。*/
+        main{
+            /*下面这两个都行，只要满足具有定位属性就行*/
+            /*position: relative;*/
+            /*position: absolute;*/
+        }
+        .position_relative_absolute_1{
+            position: absolute;
+        }
+
+        /*六*/
+        /*全屏透明层*/
+        .layer{
+            /*说明：属性absolute或float会使元素自动变为display:block;*/
+            position: absolute;
+            left: 0;
+            right: 0;
+            top:0;
+            bottom: 0;
+            background-color: black;
+            opacity: 0.5;
+        }
+        /*部分透明层*/
+        /*main{
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        .cover{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top:0;
+            bottom: 0;
+            background-color: red;
+            opacity: 0.5;
+        }*/
+
+    </style>
+
+</head>
+<body>
+
+    <!-- 一 -->
+    <main><!-- style="margin-top: 100px" --><!-- style="display: none" -->
+        <!--绝对定位-->
+        <div>1</div>
+        <div class="red position_absolute_1">2</div>
+        <!--根据body定位-->
+        <div class="red position_absolute_2">3</div>
+        <!--说明absolute元素脱离了文档流-->
+        <div>4</div>
+
+        <!--相对定位-->
+        <div class="red position_relative_1">5</div>
+        <div class="red position_relative_2">6</div>
+        <!--说明relative元素依然占据文档中原有的位置-->
+        <div>7</div>
+
+        <!--static定位-->
+        <div class="red position_static_1">8</div>
+
+        <!--固定定位-->
+        <div class="red position_fixed_1">9</div>
+        <div class="red position_fixed_2">10</div>
+        <!--说明fixed元素脱离了文档流-->
+        <div class="red position_relative_1">11</div>
+    </main>
+
+    <!-- 二 -->
+    <!--加一个透明层-->
+    <!--
+    <span class="layer"></span>
+    -->
+    <!--
+    <main>
+        <div></div>
+        <span class="cover"></span>
+    </main>
+    -->
+
+</body>
+</html>

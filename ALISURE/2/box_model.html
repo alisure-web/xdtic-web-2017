@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ALISURE">
+    <title>Box Model</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+
+            /*
+                内容的高度和宽度：
+                box-sizing为content-box时，为element的大小。
+                box-sizing为border-box时，为element+border+padding的大小。
+            */
+            width: 300px;
+            height: 300px;
+            background-color: red; /* 背景颜色包括 content 和 padding */
+
+            /*内边距*/
+            padding: 50px;
+
+            /*边框*/
+            border: 50px solid green;
+
+            /*外边距*/
+            margin: 50px; /*这一部分是透明的*/
+
+            /*轮廓：绘制于元素周围的一条线，位于边框边缘的外围，起到突出元素的作用*/
+            /*比较常见的是默认的input选中时外面会有一个圈*/
+            outline: solid 50px blue; /*不计算在大小中*/
+
+            /*
+            元素框的总宽度为：
+                element.width + padding-left + padding-right + border-left + border-right + margin-left + margin-right
+            元素框的总高度为：
+                element.height + padding-top + padding-bottom + border-top + border-bottom + margin-top + margin-right
+             */
+
+            /*box-sizing：规定了计算元素宽度和高度的方式*/
+            /*默认值content-box:element为元素框的内容框*/
+            /*box-sizing: content-box;*/
+
+            /*border-box:element+border+padding为元素框的内容框，此时总宽度为margin+width*/
+            /*用处：适合百分比（响应式）布局，可以让有border、padding的盒子方便的使用百分比*/
+            /*box-sizing: border-box;*/
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+
+</div>
+
+</body>
+</html>

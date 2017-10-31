@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ALISURE">
+    <title>Display</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            font-size: 0;
+        }
+        .style{
+            width: 100px;
+            height:100px;
+            border: 2px solid black;
+            background-color: red;
+
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .style_1{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            background-color: green;
+
+            font-size: 50px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .display{
+            /*内联元素: 元素前后没有换行符*/
+            /*行内元素设置width、height无效
+                设置padding-top、padding-bottom、margin-top、margin-bottom无效
+                设置padding-left、padding-right、margin-left、margin-right无效
+                即：水平方向有效，竖直方向无效
+             */
+            /*display: inline;*/
+
+            /*块级元素：元素前后带有换行符*/
+            /*display: block;*/
+
+            /*行内块元素：inline-block*/
+            /*inline-block使元素既拥有了block元素可以设置width和height的特性，又保持了inline元素不换行的特性。*/
+            /*行高是行内快元素高度最大的元素。*/
+            /*display: inline-block;*/
+
+            /*元素不会显示*/
+            /*display: none;*/
+
+            /*元素被渲染为列表呈现的方式（多出一个可以被list-style属性进行修饰的标记框，只有<li>元素才默认具有list-style）*/
+            /*display: list-item;*/
+
+            /*和表格布局相关的属性*/
+            /*作为表格的一个单元，类似于<th>和<td>*/
+            /*display: table-cell;*/
+            /*作为表格的一行，类似于<tr>*/
+            /*display: table-row;*/
+        }
+        .visibility{
+            /*visibility：规定元素是否可见*/
+            /*元素可见*/
+            /*visibility: visible;*/
+            /*元素不可见（在页面上会占据空间）*/
+            /*visibility: hidden;*/
+        }
+
+    </style>
+</head>
+<body>
+<!--display-->
+<!--
+<main>
+    <div class="style display">111</div>
+    <div class="style_1 display">222</div>
+    <div class="style display">333</div>
+</main>
+-->
+
+<!--visibility-->
+<!--<main>
+    <div class="style visibility">111</div>
+    <div class="style_1 visibility">222</div>
+    <div class="style visibility">333</div>
+</main>-->
+
+</body>
+</html>
