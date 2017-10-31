@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ALISURE">
+    <title>Border</title>
+    <style>
+        div{
+            float: left;
+            margin: 10px;
+        }
+        .step-1{
+            position: relative;
+            border: 100px solid;
+            border-color: #67679a #67679a #bcbcbc #bcbcbc;
+        }
+        .step-2:before{
+            position: absolute;
+            content: "";
+            /*方形*/
+            border: 50px solid #bcbcbc;
+            /*变圆*/
+            border-radius: 50%;
+            /*向左上移动*/
+            left: -85.7px;
+            top: -85.7px;
+            /*水平阴影的位置 垂直阴影的位置 颜色*/
+            box-shadow: 71px 71px #67679a;
+        }
+        .step-3:after{
+            position: absolute;
+            content: "";
+            border: 20px solid #67679a;
+            border-radius: 50%;
+            left: -56px;
+            top: -56px;
+            box-shadow: 71px 71px #bcbcbc;
+        }
+    </style>
+</head>
+<body>
+    <div class="step-1"></div>
+    <div class="step-1 step-2"></div>
+    <div class="step-1 step-2 step-3"></div>
+</body>
+</html>
