@@ -18,16 +18,15 @@
         .style{
             width: 200px;
             height: 200px;
+            background-color: #eac43e;
             font-size: 30px;
-            color: black;
             line-height: 200px;
-            background-color: #0d7fe2;
         }
 
         /* 一 */
         .overflow{
             /*默认值：子元素超出时，继续展示*/
-            /*overflow: visible;*/
+            /*overflow: auto;*/
             /*超出部分隐藏*/
             /*overflow: hidden;*/
             /*超出时展示滚动条*/
@@ -37,7 +36,9 @@
         }
         .overflow_x{
             /*默认值：子元素超出时，继续展示*/
-            /*overflow-x: visible;*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+
             /*超出部分隐藏*/
             /*overflow-x: hidden;*/
             /*超出时展示滚动条*/
@@ -60,9 +61,7 @@
 </head>
 <body>
 
-<div class="style overflow">
-    xxxxxxxxxxxxxxxxxxxxxx
-</div>
+<div class="style overflow_ellipsis">xxxxxxxxxxxxxxxx</div>
 
 </body>
 </html>
