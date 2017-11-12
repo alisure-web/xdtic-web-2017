@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ALISURE">
+    <title>Title</title>
+
+    <style>
+        .demo{
+            width: 0;
+            height: 0;
+            position: relative;
+            border: 100px solid;
+            border-color: black black green green;
+            border-radius: 50%;
+            animation: run 1s infinite linear;
+        }
+        .demo:before{
+            position: absolute;
+            content: "";
+            border: 50px solid green;
+            border-radius: 50%;
+            left: -86px;
+            top: -86px;
+            box-shadow: 71px 71px black;
+        }
+        .demo:after{
+            position: absolute;
+            content: "";
+            border: 20px solid black;
+            border-radius: 50%;
+            left: -56px;
+            top: -56px;
+            box-shadow: 71px 71px green;
+        }
+
+        @keyframes run {
+            from{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="demo"></div>
+
+</body>
+</html>
