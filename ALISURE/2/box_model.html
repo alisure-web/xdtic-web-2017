@@ -8,13 +8,12 @@
         body{
             margin: 0;
             padding: 0;
-            height: 100vh;
             display: flex;
+            height: 100vh;
             justify-content: center;
             align-items: center;
         }
         .box{
-
             /*
                 内容的高度和宽度：
                 box-sizing为content-box时，为element的大小。
@@ -46,7 +45,7 @@
 
             /*box-sizing：规定了计算元素宽度和高度的方式*/
             /*默认值content-box:element为元素框的内容框*/
-            /*box-sizing: content-box;*/
+            box-sizing: content-box;
 
             /*border-box:element+border+padding为元素框的内容框，此时总宽度为margin+width*/
             /*用处：适合百分比（响应式）布局，可以让有border、padding的盒子方便的使用百分比*/
@@ -56,9 +55,7 @@
 </head>
 <body>
 
-<div class="box">
-
-</div>
+<div class="box"></div>
 
 </body>
 </html>
