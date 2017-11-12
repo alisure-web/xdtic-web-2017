@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ALISURE">
+
+    <meta name="viewport" content="width=600, initial-scale=1.0">
+    <title>viewport</title>
+
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <script>
+        console.log(document.documentElement.clientWidth);
+        console.log(document.documentElement.clientHeight);
+    </script>
+</head>
+<body>
+<main>
+    <img src="test.png">
+    <p>
+        1、width：控制 viewport 的宽度，可以使用像素值或device-width(设备的宽度)。
+        2、height：与 width 相对应，指定viewport 高度。
+        3、initial-scale：初始缩放比例。
+        4、maximum-scale：允许用户缩放到的最大比例。
+        5、minimum-scale：允许用户缩放到的最小比例。
+        6、user-scalable：是否允许用户手动缩放。
+    </p>
+</main>
+</body>
+</html>

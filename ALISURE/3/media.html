@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ALISURE">
+    <title>media</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            width: 100vw;
+            height: 100vh;
+            background-color: #0d7fe2;
+        }
+        @media screen {
+            main{
+                background-color: #38c046;
+            }
+        }
+        @media print {
+            main{
+                background-color: #fd514f;
+            }
+        }
+        @media screen and (orientation: landscape){
+            main{
+                background-color: #29db8d;
+            }
+        }
+        @media screen and (orientation: portrait){
+            main{
+                background-color: #bebebe;
+            }
+        }
+        @media screen and (max-width: 499px){
+            main{
+                background-color: #ffdc06;
+            }
+        }
+        @media screen and (min-width: 500px) and (max-width: 800px){
+            main{
+                background-color: aqua;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <main></main>
+</body>
+</html>
