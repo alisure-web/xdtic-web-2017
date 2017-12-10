@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function handle_response(json) {
+        alert("name=" + json.name + ", age=" + json.age);
+    }
+    var script = document.createElement("script");
+    script.src = "http://localhost:8080/test/test/jsonp?callback=handle_response";
+    document.body.insertBefore(script, document.body.firstChild);
+</script>
+<script>
+    /*handle_response({"age":7,"name":"ALISURE"});*/
+</script>
+</body>
+</html>

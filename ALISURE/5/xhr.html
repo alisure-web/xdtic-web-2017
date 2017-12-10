@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>Hello ALISURE</div>
+<script>
+
+    function ajax() {
+        /*创建XHR对象*/
+        var xhr = new XMLHttpRequest();
+        /*检测XHR对象的readyState属性，该属性表示请求/响应过程的当前活动阶段。
+         只要readyState属性的值由一个值变成另一个值，都会触发一次readystatechange事件。*/
+        xhr.onreadystatechange = function () {
+            /*只对readyState=4感兴趣，4表示完成，已经接收到全部响应数据，并且可以使用了。*/
+            if(xhr.readyState == 4){
+                /*当接收到响应后，检查status属性，以确定响应是否返回成功。
+                 若status成功，responseText属性的内容已经就绪。*/
+                if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+                    alert(xhr.responseText);
+                }else{
+                    alert("Request was unsuccessful:" + xhr.status);
+                }
+                /*由于内存的原因，不建议重用XHR*/
+                xhr = null;
+            }
+        };
+        /*启动一个请求：请求的类型、请求的地址、是否异步发送*/
+        xhr.open("post", "http://localhost:8080/test/test/post_sth", true);
+        /*发送请求: 发送的数据*/
+        xhr.send();
+    }
+    (function () {
+        ajax();
+    })();
+
+</script>
+
+</body>
+</html>
